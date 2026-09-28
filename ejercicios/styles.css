@@ -1,0 +1,10 @@
+p1{
+    /*color:rgb(162, 255, 0);*/
+    font-family: sans-serif;
+    font-size:13px;
+    font-weight: 200;
+    font-style: italic;
+}
+span{
+    color:red
+}
