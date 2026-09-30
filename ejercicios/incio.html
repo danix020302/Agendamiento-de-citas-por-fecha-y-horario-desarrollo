@@ -1,23 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Agendamiento de Citas</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>Agendamiento de citas por calentario</h1>
-        <p1>Esta pagina esta disenada para el desarrollo de agendamiento de citas 
-            con solo el ingreso del nombre para identificar la persona que solicito
-            una <b>cita</b> un dia en especifico con hora en especifico
-        </p1>
-        <p2>
-            <h2>Que vamos a requerir</h2>
-            <li>Nombre de la persona</li>
-            <li>Fecha</li>
-            <li>Hora</li>
-        </p2>
-        <h1>
-            <a href="https://www.youtube.com/watch?v=ELSm-G201Ls&t=3504s">Video referencia</a>
-        </h1>
+        <header>
+            <h1>Sistema de agendamiento de Citas</h1>
+            <p class="subtitulo">Ingresa tu nombre, selecciona fecha y hora disponible</p>
+        </header>
+        <main class="contenedor">
+            <section class="formulario">
+                <h2>Nueva Cita</h2>
+
+                <div class="campo">
+                    <label for="nombre">Nombre de la persona</label>
+                    <input type="text" id="nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="doctor">Nombre del doctor</label>
+                    <select type="text" id="doctor" required>
+                        <option value="">Por favor seleccionar un doctor</option>
+                        <option value="Alejandro">Alejandro</option>
+                        <option value="Felipe">Felipe</option>
+                        <option value="Nicolas">Nicolas</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" required>
+                </div>
+
+                <div class="campo">
+                    <label for="hora">Hora:</label>
+                    <select  id="hora" required>
+                        <option value="">Por favor seleccionar una hora</option>
+                        <option value="08:00">08:00 AM</option>
+                        <option value="09:00">09:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="14:00">02:00 PM</option>
+                        <option value="15:00">03:00 PM</option>
+                        <option value="16:00">04:00 PM</option>
+                        <option value="17:00">05:00 PM</option>
+                    </select>
+                </div>
+
+                <button type="button" onclick="agendarCita()">Agendar Cita</button>
+                <p id="mensaje" class="mensaje"></p>
+            </section>
+
+            <!--citas agendadas-->
+            <section class="lista-citas">
+                <h2>Citas Agendadas</h2>
+                <ul id="listaCitas">
+                    <li class="vacio">No hay citas agendadas aún</li>
+            </ul>
+        </section>
+        </main>
+        <script src="script.js"></script>
     </body>
 </html>

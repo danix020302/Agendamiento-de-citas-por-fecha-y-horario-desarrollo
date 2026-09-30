@@ -1,10 +1,139 @@
-p1{
-    /*color:rgb(162, 255, 0);*/
-    font-family: sans-serif;
-    font-size:13px;
-    font-weight: 200;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+header {
+    text-align: center;
+    padding: 30px 20px;
+    color: white;
+}
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.subtitulo {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+@media (max-width: 700px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+}
+.formulario,
+.lista-citas {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #555;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.campo input:focus,
+.campo select:focus {
+    outline: none;
+    border-color: #764ba2;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #764ba2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #5a3780;
+}
+
+.mensaje {
+    margin-top: 12px;
+    text-align: center;
+    font-weight: 600;
+    min-height: 20px;
+}
+
+.mensaje.exito { color: #2e7d32; }
+.mensaje.error { color: #c62828; }
+
+#listaCitas {
+    list-style: none;
+}
+
+#listaCitas li {
+    background: #f5f3fa;
+    border-left: 4px solid #764ba2;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+#listaCitas li.vacio {
+    background: transparent;
+    border: none;
+    color: #999;
+    text-align: center;
     font-style: italic;
 }
-span{
-    color:red
+
+#listaCitas li .nombre {
+    font-weight: 700;
+    color: #764ba2;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    opacity: 0.8;
+    font-size: 0.9rem;
 }
