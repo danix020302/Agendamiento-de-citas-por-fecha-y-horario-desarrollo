@@ -137,3 +137,32 @@ footer {
     opacity: 0.8;
     font-size: 0.9rem;
 }
+/* ---- Añadidos: acciones y botón cancelar ---- */
+.acciones {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.acciones button {
+    padding: 8px;
+    font-size: 0.9rem;
+}
+#listaCitas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+#listaCitas li.vacio {
+    display: block;
+}
+.btn-cancelar {
+    width: auto;
+    padding: 6px 10px;
+    background: #c62828;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+.btn-cancelar:hover {
+    background: #8e1c1c;
+}

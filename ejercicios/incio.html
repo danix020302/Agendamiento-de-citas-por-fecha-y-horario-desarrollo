@@ -22,11 +22,12 @@
 
                 <div class="campo">
                     <label for="doctor">Nombre del doctor</label>
-                    <select type="text" id="doctor" required>
+                    <select id="doctor" required>
                         <option value="">Por favor seleccionar un doctor</option>
                         <option value="Alejandro">Alejandro</option>
                         <option value="Felipe">Felipe</option>
                         <option value="Nicolas">Nicolas</option>
+                        <option value="Nicol">Nicol</option>
                     </select>
                 </div>
 
@@ -57,6 +58,9 @@
             <!--citas agendadas-->
             <section class="lista-citas">
                 <h2>Citas Agendadas</h2>
+                <div class="acciones">
+                    <button type="button" id="btnOrden" onclick="cambiarOrden()">Ver más recientes primero</button>
+                </div>
                 <ul id="listaCitas">
                     <li class="vacio">No hay citas agendadas aún</li>
             </ul>
